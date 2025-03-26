@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2E778E612D93D3010082D2F8 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 2E778E602D93D3010082D2F8 /* HotKey */; };
+		2E778E732D93D6C00082D2F8 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E778E722D93D6C00082D2F8 /* ServiceManagement.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2E778E3A2D93D1590082D2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,7 @@
 		2E778E282D93D1590082D2F8 /* ClipboardHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E778E392D93D1590082D2F8 /* ClipboardHistoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardHistoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E778E432D93D1590082D2F8 /* ClipboardHistoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardHistoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E778E722D93D6C00082D2F8 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E778E732D93D6C00082D2F8 /* ServiceManagement.framework in Frameworks */,
+				2E778E612D93D3010082D2F8 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,7 @@
 				2E778E2A2D93D1590082D2F8 /* ClipboardHistory */,
 				2E778E3C2D93D1590082D2F8 /* ClipboardHistoryTests */,
 				2E778E462D93D1590082D2F8 /* ClipboardHistoryUITests */,
+				2E778E712D93D6C00082D2F8 /* Frameworks */,
 				2E778E292D93D1590082D2F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +99,14 @@
 				2E778E432D93D1590082D2F8 /* ClipboardHistoryUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2E778E712D93D6C00082D2F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E778E722D93D6C00082D2F8 /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +129,7 @@
 			);
 			name = ClipboardHistory;
 			packageProductDependencies = (
+				2E778E602D93D3010082D2F8 /* HotKey */,
 			);
 			productName = ClipboardHistory;
 			productReference = 2E778E282D93D1590082D2F8 /* ClipboardHistory.app */;
@@ -195,6 +213,9 @@
 			);
 			mainGroup = 2E778E1F2D93D1580082D2F8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2E778E5C2D93D2500082D2F8 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2E778E292D93D1590082D2F8 /* Products */;
 			projectDirPath = "";
@@ -401,7 +422,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -428,7 +451,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -549,6 +574,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E778E5C2D93D2500082D2F8 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E778E602D93D3010082D2F8 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E778E5C2D93D2500082D2F8 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E778E202D93D1590082D2F8 /* Project object */;
 }
